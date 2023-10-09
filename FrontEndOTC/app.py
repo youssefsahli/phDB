@@ -14,12 +14,12 @@ class Product(Base):
     DCI = Column(Integer, ForeignKey('DCIs.ID'))
     Commercial = Column(String)
     Photo = Column(LargeBinary)
-    TheraClass = Column(Integer, ForeignKey('TheraClass.ID')) 
+    TheraClass = Column(Integer, ForeignKey('TheraClass.ID'))
     Forme = Column(String)
     Dosage = Column(String)
     Posology = Column(String)
 
-DATABASE_URL = "sqlite:///OTC.db"
+DATABASE_URL = "sqlite:///./OTC.db"
 
 engine = create_engine(DATABASE_URL, echo=True)
 SessionLocal = sessionmaker(bind=engine)
